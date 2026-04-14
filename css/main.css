@@ -13,21 +13,33 @@ header {
 }
 
 main {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
     flex: 1;
 }
 
 .about-container {
+    display: flex;
+    flex-direction: column;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .about-row {
+    background-color: rgba(255, 255, 255, 0.95);
     display: grid;
     grid-template-columns: 3fr 1fr;
+    flex: 1;
+    margin-bottom: 32px;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 100px;
 }
 
 footer {
     background: powderblue;
-    padding: ;
+    padding: 20px;
 }
