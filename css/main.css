@@ -1,1 +1,33 @@
 /* Place CSS styles here */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.about-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+footer {
+    background: powderblue;
+    padding: ;
+}
