@@ -43,3 +43,148 @@ footer {
     background: powderblue;
     padding: 20px;
 }
+
+/* navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242a64;
+  min-height: 100vh;
+  background: #ffff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  padding-right: 34px;
+  padding-left: 24px;
+  position: sticky;
+  top: 0;
+  background: #242a64;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 5 rem;
+  max-width: 1600px
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo img {
+  width: 60px
+  
+}
+
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: #fff4e1;
+  padding: 3px 20px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+  color: #242a64;
+  background: #fff4e1;
+  border: 2px solid #fff4e1;
+  font-family: "arbotek-rounded", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* navbartoggle */
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: #242a64;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px #000000;
+    backdrop-filter: blur(10px);
+    background-color: #fff7e0ba;
+  }
+
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+
+  /* hamburger */
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}}
+/* end navbar */
+
+h1 {
+font-family: "butik-display-normal", sans-serif;
+font-weight: 700;
+font-style: normal;
+color: #242a64;
+}
